@@ -1,4 +1,4 @@
-package cn.mypackage.practise;
+package cn.myproject.rainproject;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
-public class MyView extends View {
+public class EmotionRainView extends View {
     private int mRadius;
     private int mColor;
     private int mLinneHeight;
@@ -28,16 +28,16 @@ public class MyView extends View {
     private float angle;
     private Rect bound;
 
-    public MyView(Context context, AttributeSet attrs) {
+    public EmotionRainView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MyView);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.EmotionRainView);
 
-        mRadius = (int) ta.getDimension(R.styleable.MyView_radius, dp2px(30));
-        mColor = ta.getColor(R.styleable.MyView_color, 0xffff0000);
-        mLinneHeight = (int) ta.getDimension(R.styleable.MyView_line_width, dp2px(3));
-        mTextSize = (int) ta.getDimension(R.styleable.MyView_android_textSize, dp2px(50));
-        mProgress = ta.getInt(R.styleable.MyView_android_progress, 0);
+        mRadius = (int) ta.getDimension(R.styleable.EmotionRainView_radius, dp2px(30));
+        mColor = ta.getColor(R.styleable.EmotionRainView_color, 0xffff0000);
+        mLinneHeight = (int) ta.getDimension(R.styleable.EmotionRainView_line_width, dp2px(3));
+        mTextSize = (int) ta.getDimension(R.styleable.EmotionRainView_android_textSize, dp2px(50));
+        mProgress = ta.getInt(R.styleable.EmotionRainView_android_progress, 0);
 
         ta.recycle();
 

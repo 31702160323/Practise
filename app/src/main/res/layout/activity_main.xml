@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
-    <cn.mypackage.practise.MyView
+    <cn.myproject.rainproject.EmotionRainView
         android:id="@+id/id_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
