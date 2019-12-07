@@ -25,7 +25,7 @@ public class EmotionRainView extends View {
     private int height;
     private int textHeight;
     private String text;
-    private float angle;
+    private int angle;
     private Rect bound;
 
     public EmotionRainView(Context context, AttributeSet attrs) {
@@ -94,7 +94,6 @@ public class EmotionRainView extends View {
 
         width = w;
         height = h;
-        angle = mProgress * 1.0f / 100 * 360;
         bound = new Rect();
         mProgressCicleRectF = new RectF(0, 0, w - getPaddingLeft() * 2, h - getPaddingLeft() * 2);
     }
@@ -118,7 +117,7 @@ public class EmotionRainView extends View {
 
         canvas.save();
         canvas.translate(getPaddingLeft(), getPaddingTop());//移动坐标
-        canvas.drawArc( mProgressCicleRectF, 0, angle, false, mPaint);
+        canvas.drawArc( mProgressCicleRectF, angle, angle, false, mPaint);
         canvas.restore();
 
         text = mProgress + "%";
@@ -133,6 +132,7 @@ public class EmotionRainView extends View {
 
     public void setProgress(int progress){
         mProgress = progress;
+        angle = (int) (mProgress * 1.0f / 100 * 360);
         invalidate();
     }
 

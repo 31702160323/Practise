@@ -7,13 +7,27 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
-    <cn.myproject.rainproject.EmotionRainView
-        android:id="@+id/id_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:progress="0"
-        app:color="#00ff00"
-        app:radius="150dp"
-        android:padding="10dp"/>
+    <!--<cn.myproject.rainproject.EmotionRainView-->
+        <!--android:id="@+id/id_test"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:progress="0"-->
+        <!--app:color="#00ff00"-->
+        <!--app:radius="150dp"-->
+        <!--android:padding="10dp"/>-->
+
+    <!--<com.github.chengang.library.TickView-->
+        <!--android:id="@+id/tick_view_accent"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:check_base_color="@color/colorAccent"-->
+        <!--app:rate="normal" />-->
+
+    <cn.myproject.rainproject.TickView
+        android:id="@+id/tickView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:radius="15dp"
+        app:color="#00ff00"/>
 
 </RelativeLayout>

@@ -1,24 +1,23 @@
 package cn.mypackage.practise;
 
 import android.animation.ObjectAnimator;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import cn.myproject.rainproject.EmotionRainView;
+import cn.myproject.rainproject.TickView;
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TickView tickView = findViewById(R.id.tickView);
+        ObjectAnimator.ofInt(tickView,"progress", 0, 360).setDuration(3000).start();
 
-        final View view = findViewById(R.id.id_test);
-
-        view.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                ObjectAnimator.ofInt(view, "progress", 0, 100).setDuration(3000).start();
-            }
-        });
+//        EmotionRainView emotionRainView = findViewById(R.id.id_test);
+//        ObjectAnimator.ofInt(emotionRainView, "progress", 0, 100).setDuration(3000).start();
     }
 }
